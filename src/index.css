@@ -10,7 +10,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #0a0a1a, #1a0a2e, #16213e, #0f0f23);
+  background: #000000;
   overflow-x: hidden;
 }
 
