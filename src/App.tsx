@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import SpaceBackground from './components/SpaceBackground';
+import RealisticSpaceBackground from './components/RealisticSpaceBackground';
 import MeteorShower from './components/MeteorShower';
 import CosmicAurora from './components/CosmicAurora';
 import QuantumField from './components/QuantumField';
@@ -46,7 +46,7 @@ function App() {
   return (
     <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
       {/* Enhanced space background */}
-      <SpaceBackground />
+      <RealisticSpaceBackground />
       <QuantumField />
       <CosmicAurora />
       <MeteorShower />
