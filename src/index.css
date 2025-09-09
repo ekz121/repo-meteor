@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Space Theme Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000011;
+  overflow-x: hidden;
+}
+
+/* Enhanced Parallax Animations */
+@keyframes meteorShower {
+  0% {
+    transform: translateX(-100px) translateY(-100px) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(calc(100vh + 100px)) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes planetRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nebulaFlow {
+  0%, 100% {
+    transform: translateX(0) scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateX(20px) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes cosmicPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.6), 0 0 80px rgba(139, 92, 246, 0.4);
+  }
+}
+
+@keyframes galaxySpiral {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+@keyframes asteroidFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(10px) rotate(240deg);
+  }
+}
+
+@keyframes warpSpeed {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(20) scaleY(0.1);
+    opacity: 0;
+  }
+}
+
+/* Utility Classes */
+.meteor {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: linear-gradient(45deg, #fff, #00d4ff);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+  animation: meteorShower 3s linear infinite;
+}
+
+.meteor::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #00d4ff, #fff);
+  transform: translateY(-50%);
+}
+
+.star-twinkle {
+  animation: starTwinkle 2s ease-in-out infinite;
+}
+
+.cosmic-glow {
+  animation: cosmicPulse 3s ease-in-out infinite;
+}
+
+.galaxy-spin {
+  animation: galaxySpiral 60s linear infinite;
+}
+
+.asteroid-drift {
+  animation: asteroidFloat 8s ease-in-out infinite;
+}
+
+.warp-effect {
+  animation: warpSpeed 0.5s ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #000011, #1a0a2e);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00d4ff, #8b5cf6);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0891b2, #7c3aed);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+}
+
+/* Additional Space Effects */
+@keyframes quantumPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes solarFlare {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes deepSpaceFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-15px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(15px) translateX(5px) rotate(270deg);
+  }
+}
+
+.quantum-pulse {
+  animation: quantumPulse 4s ease-in-out infinite;
+}
+
+.solar-flare {
+  animation: solarFlare 6s ease-in-out infinite;
+}
+
+.deep-space-float {
+  animation: deepSpaceFloat 12s ease-in-out infinite;
+}
+
+/* Enhanced Glow Effects */
+.cosmic-glow-intense {
+  box-shadow: 
+    0 0 20px rgba(0, 212, 255, 0.6),
+    0 0 40px rgba(139, 92, 246, 0.4),
+    0 0 60px rgba(6, 255, 165, 0.3),
+    inset 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+.nebula-glow {
+  box-shadow: 
+    0 0 30px rgba(139, 92, 246, 0.5),
+    0 0 60px rgba(255, 107, 157, 0.3),
+    0 0 90px rgba(6, 255, 165, 0.2);
+}
+
+/* Responsive Space Effects */
+@media (max-width: 768px) {
+  .meteor {
+    width: 1px;
+    height: 1px;
+  }
+  
+  .meteor::before {
+    width: 200px;
+  }
+  
+  .cosmic-glow-intense {
+    box-shadow: 
+      0 0 15px rgba(0, 212, 255, 0.5),
+      0 0 30px rgba(139, 92, 246, 0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meteor,
+  .star-twinkle,
+  .cosmic-glow,
+  .galaxy-spin,
+  .asteroid-drift {
+    animation: none;
+  }
+}
